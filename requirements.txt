@@ -1,0 +1,4 @@
+Flask
+cloudinary
+psycopg2-binary
+gunicorn

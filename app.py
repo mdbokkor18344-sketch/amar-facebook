@@ -155,7 +155,7 @@ def index():
             session["user_id"]=uid; session["name"]=name; session["is_admin"] = True if email_db == ADMIN_EMAIL else False
             return redirect("/home")
         return render_template_string(BASE_HTML.replace("{{ content | safe }}","<div class='card'><p style='color:red'>ভুল ইমেইল/পাসওয়ার্ড</p><a href='/'>আবার চেষ্টা</a></div>"))
-    return render_template_string(BASE_HTML.replace("{{ content | safe }}","<div class='card'><h2>Login</h2><form method='post'><input name='email' placeholder='Email' required><input name='password' type='password' placeholder='Password' required><button>Login</button></form><p><a href='/signup'>Create new account</a></p><p style='font-size:11px;color:gray'>Admin: mdbokkor44@gmail.com / admin123</p></div>"))
+    return render_template_string(BASE_HTML.replace("{{ content | safe }}","<div class='card'><h2>Login</h2><form method='post'><input name='email' placeholder='Email' required><input name='password' type='password' placeholder='Password' required><button>Login</button></form><p><a href='/signup'>Create new account</a></p></div>"))
 
 @app.route("/signup", methods=["GET","POST"])
 def signup():
